@@ -1,0 +1,174 @@
+VERSION "HIPBNYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY/4/%%%/4/'%**4YYY///"
+
+
+NS_ : 
+	NS_DESC_
+	CM_
+	BA_DEF_
+	BA_
+	VAL_
+	CAT_DEF_
+	CAT_
+	FILTER
+	BA_DEF_DEF_
+	EV_DATA_
+	ENVVAR_DATA_
+	SGTYPE_
+	SGTYPE_VAL_
+	BA_DEF_SGTYPE_
+	BA_SGTYPE_
+	SIG_TYPE_REF_
+	VAL_TABLE_
+	SIG_GROUP_
+	SIG_VALTYPE_
+	SIGTYPE_VALTYPE_
+
+BS_:
+
+BU_: ECM TST
+
+
+BO_ 1 TEST_1: 8 TST
+ SG_ TEST_1_SIG_1 : 0|2@1+ (1,0) [0|3] ""  ECM
+ SG_ TEST_1_SIG_2 : 2|12@1+ (1,0) [0|4095] ""  ECM
+ SG_ TEST_1_SIG_3 : 14|18@1+ (1,0) [0|262143] ""  ECM
+ SG_ TEST_1_SIG_4 : 32|32@1+ (1,0) [0|4294967295] ""  ECM
+
+BO_ 2 TEST_2: 6 TST
+ SG_ TEST_2_SIG_1 : 7|8@0+ (1,-127) [-127|128] ""  ECM
+ SG_ TEST_2_SIG_2 : 15|16@0+ (1,0) [0|65535] ""  ECM
+ SG_ TEST_2_SIG_3 : 31|4@0+ (1,0) [0|15] ""  ECM
+ SG_ TEST_2_SIG_4 : 27|16@0+ (1,0) [0|65535] ""  ECM
+ SG_ TEST_2_SIG_5 : 43|4@0+ (1,0) [0|15] ""  ECM
+
+BO_ 3 TEST_3: 8 TST
+ SG_ TEST_3_SIG_1 : 0|8@1- (1,0) [-128|127] ""  ECM
+ SG_ TEST_3_SIG_2 : 8|16@1- (1,0) [-32768|32767] ""  ECM
+ SG_ TEST_3_SIG_3 : 24|16@1+ (1,0) [0|65535] ""  ECM
+ SG_ TEST_3_SIG_4 : 40|8@1- (0.1,0) [-12.8|12.7] ""  ECM
+ SG_ TEST_3_SIG_5 : 48|16@1- (0.1,0) [-3276.8|3276.7] ""  ECM
+
+BO_ 4 TEST_4: 4 TST
+ SG_ TEST_4_SIG_1 : 0|2@1+ (1,0) [0|3] ""  ECM
+ SG_ TEST_4_SIG_2 : 2|8@1+ (1,-265) [-265|-10] ""  ECM
+ SG_ TEST_4_SIG_3 : 14|16@1+ (1,10) [10|65545] ""  ECM
+
+BO_ 5 TEST_5: 8 TST
+ SG_ TEST_5_SIG_1 : 0|32@1+ (1,0) [0|500000] "m"  ECM
+ SG_ TEST_5_SIG_2 : 32|32@1+ (1,0) [0|500000] "mi"  ECM
+
+BO_ 6 TEST_6: 8 TST
+ SG_ TEST_6_SIG_1 : 0|32@1+ (1,0) [0|500000] "km"  ECM
+ SG_ TEST_6_SIG_2 : 32|32@1+ (1,0) [0|500000] "km/h"  ECM
+
+BO_ 7 TEST_7: 8 TST
+ SG_ TEST_7_SIG_1 : 0|32@1+ (1,0) [0|500000] "mi/h"  ECM
+ SG_ TEST_7_SIG_2 : 32|32@1+ (1,0) [0|500000] "m/s"  ECM
+
+BO_ 8 TEST_8: 8 TST
+ SG_ TEST_8_SIG_1 : 0|32@1- (1,0) [-273|20000] "K"  ECM
+ SG_ TEST_8_SIG_2 : 32|32@1- (1,0) [-273|20000] "F"  ECM
+
+BO_ 9 TEST_9: 8 TST
+ SG_ TEST_9_SIG_1 : 0|32@1+ (1,0) [0|500000] "mi"  ECM
+ SG_ TEST_9_SIG_2 : 32|32@1+ (1,0) [0|500000] "km/h"  ECM
+
+BO_ 10 TEST_10: 8 TST
+ SG_ TEST_10_SIG_1 : 0|32@1- (1,0) [0|500000] "F"  ECM
+ SG_ TEST_10_SIG_2 : 32|32@1- (1,0) [0|500000] "K"  ECM
+
+BO_ 11 TEST_11: 8 TST
+ SG_ TEST_11_year : 0|8@1+ (1,2018) [2018|2273] ""  ECM
+ SG_ TEST_11_month : 8|4@1+ (1,1) [1|12] ""  ECM
+ SG_ TEST_11_day : 12|5@1+ (1,1) [1|31] ""  ECM
+ SG_ TEST_11_hour : 17|5@1+ (1,0) [0|23] ""  ECM
+ SG_ TEST_11_min : 22|6@1+ (1,0) [0|59] ""  ECM
+
+BO_ 12 TEST_12: 8 TST
+ SG_ TEST_12_SIG_1 : 0|32@1- (1,0) [-2147483648|2147483647] ""  ECM
+ SG_ TEST_12_SIG_2 : 32|32@1- (0.1,0) [-214748364.8|214748364.7] ""  ECM
+
+BO_ 13 TEST_13: 8 TST
+ SG_ TEST_13_SIG_1 : 0|32@1+ (1,-2147483648) [-2147483648|2147483647] ""  ECM
+ SG_ TEST_13_SIG_2 : 32|32@1+ (0.1,-214748364.8) [-214748364.8|214748364.7] ""  ECM
+
+
+CM_ "CAN specification for unit tests";
+CM_ BU_ TST "Test module";
+CM_ BO_ 1 "TEST 1";
+CM_ SG_ 1 TEST_1_SIG_1 "Test 1 signal 1.";
+CM_ SG_ 1 TEST_1_SIG_2 "Test 1 signal 2.";
+CM_ SG_ 1 TEST_1_SIG_3 "Test 1 signal 3.";
+CM_ SG_ 1 TEST_1_SIG_4 "Test 1 signal 4.";
+CM_ BO_ 2 "TEST 2";
+CM_ SG_ 2 TEST_2_SIG_1 "Test 2 signal 1.";
+CM_ SG_ 2 TEST_2_SIG_2 "Test 2 signal 2.";
+CM_ SG_ 2 TEST_2_SIG_3 "Test 2 signal 3.";
+CM_ SG_ 2 TEST_2_SIG_4 "Test 2 signal 4.";
+CM_ SG_ 2 TEST_2_SIG_5 "Test 2 signal 5.";
+CM_ BO_ 3 "TEST 3";
+CM_ SG_ 3 TEST_3_SIG_1 "Test 3 signal 1.";
+CM_ SG_ 3 TEST_3_SIG_2 "Test 3 signal 2.";
+CM_ SG_ 3 TEST_3_SIG_3 "Test 3 signal 3.";
+CM_ SG_ 3 TEST_3_SIG_4 "Test 3 signal 4.";
+CM_ SG_ 3 TEST_3_SIG_5 "Test 3 signal 5.";
+CM_ BO_ 4 "TEST 4";
+CM_ SG_ 4 TEST_4_SIG_1 "Test 4 signal 1.";
+CM_ SG_ 4 TEST_4_SIG_2 "Test 4 signal 2.";
+CM_ SG_ 4 TEST_4_SIG_3 "Test 4 signal 3.";
+CM_ BO_ 5 "TEST 5";
+CM_ SG_ 5 TEST_5_SIG_1 "Test 5 signal 1.";
+CM_ SG_ 5 TEST_5_SIG_2 "Test 5 signal 2.";
+CM_ BO_ 6 "TEST 6";
+CM_ SG_ 6 TEST_6_SIG_1 "Test 6 Signal 1.";
+CM_ SG_ 6 TEST_6_SIG_2 "Test 6 Signal 2.";
+CM_ BO_ 7 "TEST 7";
+CM_ SG_ 7 TEST_7_SIG_1 "Test 7 Signal 1.";
+CM_ SG_ 7 TEST_7_SIG_2 "Test 7 Signal 2.";
+CM_ BO_ 8 "TEST 8";
+CM_ SG_ 8 TEST_8_SIG_1 "Test 8 Signal 1.";
+CM_ SG_ 8 TEST_8_SIG_2 "Test 8 Signal 2.";
+CM_ BO_ 9 "TEST 9";
+CM_ SG_ 9 TEST_9_SIG_1 "Test 9 Signal 1.";
+CM_ SG_ 9 TEST_9_SIG_2 "Test 9 Signal 2.";
+CM_ BO_ 10 "TEST 10";
+CM_ SG_ 10 TEST_10_SIG_1 "Test 10 Signal 1.";
+CM_ SG_ 10 TEST_10_SIG_2 "Test 10 Signal 2.";
+CM_ BO_ 11 "TEST 11";
+CM_ SG_ 11 TEST_year "Test 11 year.";
+CM_ SG_ 11 TEST_month "Test 11 month.";
+CM_ SG_ 11 TEST_day "Test 11 day.";
+CM_ SG_ 11 TEST_hour "Test 11 hour.";
+CM_ SG_ 11 TEST_min "Test 11 min.";
+CM_ BO_ 12 "TEST 12";
+CM_ SG_ 12 TEST_12_SIG_1 "Test 12 Signal 1.";
+CM_ SG_ 12 TEST_12_SIG_2 "Test 12 Signal 2.";
+CM_ BO_ 12 "TEST 13";
+CM_ SG_ 12 TEST_13_SIG_1 "Test 13 Signal 1.";
+CM_ SG_ 12 TEST_13_SIG_2 "Test 13 Signal 2.";
+BA_DEF_ SG_  "TestAttrSignal" INT 0 65535;
+BA_DEF_ BO_  "TestAttrFloat" FLOAT 0 65535;
+BA_DEF_ BO_  "TestAttrInt" INT 0 65535;
+BA_DEF_ BO_  "TestAttrEnum" ENUM  "No","Yes";
+BA_DEF_ BO_  "TestAttrString" STRING ;
+BA_DEF_  "TestAttrGlobal" STRING ;
+BA_DEF_  "VersionDay" INT 0 49;
+BA_DEF_  "VersionYear" INT 2017 2120;
+BA_DEF_  "VersionNumber" INT 0 65535;
+BA_DEF_  "VersionMonth" INT 0 18;
+BA_DEF_DEF_  "VersionYear" 2020;
+BA_DEF_DEF_  "VersionMonth" 3;
+BA_DEF_DEF_  "VersionDay" 26;
+BA_DEF_DEF_  "VersionNumber" 1;
+BA_DEF_DEF_  "TestAttrSignal" 1;
+BA_DEF_DEF_  "TestAttrFloat" 2;
+BA_DEF_DEF_  "TestAttrInt" 3;
+BA_DEF_DEF_  "TestAttrEnum" "Yes";
+BA_DEF_DEF_  "TestAttrString" "";
+BA_DEF_DEF_  "TestAttrGlobal" "";
+BA_ "TestAttrInt" BO_ 1 2;
+BA_ "TestAttrString" BO_ 1 "Test";
+BA_ "TestAttrSignal" SG_ 1 TEST_1_SIG_2 10;
+BA_ "TestAttrEnum" BO_ 3 0;
+BA_ "TestAttrGlobal" "Test";
+VAL_ 1 TEST_1_SIG_1 0 "off" 1 "on" 2 "reserve" ;
