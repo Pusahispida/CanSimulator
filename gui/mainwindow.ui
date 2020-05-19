@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>781</width>
+    <height>580</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>781</width>
+      <height>551</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>-1</number>
+    </property>
+    <property name="tabsClosable">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>781</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuMenu1">
+    <property name="title">
+     <string>Settings</string>
+    </property>
+    <widget class="QMenu" name="menuChooseTime">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Choose time</string>
+     </property>
+     <addaction name="actionSendUTCTime"/>
+     <addaction name="actionSendLocalTime"/>
+    </widget>
+    <addaction name="actionNativeMode"/>
+    <addaction name="separator"/>
+    <addaction name="actionSendTime"/>
+    <addaction name="menuChooseTime"/>
+    <addaction name="separator"/>
+   </widget>
+   <widget class="QMenu" name="menuNew_tab">
+    <property name="title">
+     <string>Tabs</string>
+    </property>
+    <addaction name="actionNewTab"/>
+    <addaction name="actionLoggerWindow"/>
+   </widget>
+   <widget class="QMenu" name="menuFilters">
+    <property name="title">
+     <string>Filters</string>
+    </property>
+    <addaction name="actionDisableAllSignals"/>
+    <addaction name="actionEnableAllSignals"/>
+   </widget>
+   <addaction name="menuNew_tab"/>
+   <addaction name="menuMenu1"/>
+   <addaction name="menuFilters"/>
+  </widget>
+  <action name="actionNativeMode">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Native unit mode</string>
+   </property>
+  </action>
+  <action name="actionSendUTCTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>UTC</string>
+   </property>
+  </action>
+  <action name="actionSendLocalTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Local time</string>
+   </property>
+  </action>
+  <action name="actionSendTime">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Send time</string>
+   </property>
+  </action>
+  <action name="actionNewTab">
+   <property name="text">
+    <string>New tab</string>
+   </property>
+  </action>
+  <action name="actionLoggerWindow">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Logger window</string>
+   </property>
+  </action>
+  <action name="actionDisableAllSignals">
+   <property name="text">
+    <string>Disable all signals</string>
+   </property>
+  </action>
+  <action name="actionEnableAllSignals">
+   <property name="text">
+    <string>Enable all signals</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
