@@ -1,11 +1,11 @@
-1. Introduction
+Introduction
 
 The purpose of this simulator is to send simulated vehicle
 data through CAN bus. 
 
-2. Directory structure
+Directory structure
 
-3. Build and usage
+Build and usage
 
 Build can be done using the 'build.sh' script.
 CAN bus initialization can be done using for example './can_init.sh can0 500000'.
@@ -15,13 +15,13 @@ Available commands can be listed using
 Adding permissions for automatic CAN bus initialization to can-simulator-ng binary
 sudo setcap cap_net_raw,cap_net_admin+ep can-simulator-ng
 
-4. Unittesting
+Unittesting
 Run to compile and execute tests:
 
 ./build.sh tests test
 Tests are implemented using googletest framework. All tests reside in tests subfolder.
 
-5. Dependencies
+Dependencies
 The CAN simulator is dependant on cmake, libsocketcan, libjansson and libcap to work
 Installation: sudo apt-get install cmake libsocketcan-dev libjansson-dev libcap-dev
 CAN Simulator UI also requires Qt libraries
@@ -39,7 +39,7 @@ sudo cp -a libg* /usr/lib/
 popd
 
 
-6. Building deb package
+Building deb package
 Install requirements for deb package building:
 sudo apt-get install debhelper
 Build deb package:
