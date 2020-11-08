@@ -9,14 +9,12 @@ GUI is done with QT own libraries, its ugly.
 
 ## Build and usage
 
-Build can be done using the 'build.sh' script.
-You can test this simulator with virtual CAN interface (vCAN).
-CAN bus initialization can be done using for example './can_init.sh can0 500000'.
-Basic usage of CAN simulator:
-Available commands can be listed using
-./can-simulator-ng --help
-Adding permissions for automatic CAN bus initialization to can-simulator-ng binary
-sudo setcap cap_net_raw,cap_net_admin+ep can-simulator-ng
+* Build can be done using the 'build.sh' script.
+* You can test this simulator with virtual CAN interface (vCAN).
+* CAN bus initialization can be done using for example './can_init.sh can0 500000'.
+* Basic usage of CAN simulator:
+* Available commands can be listed using: "./can-simulator-ng --help"
+* Adding permissions for automatic CAN bus initialization to can-simulator-ng binary "sudo setcap cap_net_raw,cap_net_admin+ep can-simulator-ng"
 
 ## Unittesting
 Run to compile and execute tests:
