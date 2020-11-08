@@ -3,11 +3,14 @@
 The purpose of this simulator is to send simulated vehicle
 data through CAN bus. 
 
+GUI is done with QT own libraries, its ugly.
+
 ## Directory structure
 
 ## Build and usage
 
 Build can be done using the 'build.sh' script.
+You can test this simulator with virtual CAN interface (vCAN).
 CAN bus initialization can be done using for example './can_init.sh can0 500000'.
 Basic usage of CAN simulator:
 Available commands can be listed using
